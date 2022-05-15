@@ -44,11 +44,20 @@ class YamlData:
         f = open(file=os.path.join(test_case_data_dir, self.__filename), encoding='utf-8', mode='r')
         return list(yaml.full_load_all(f.read()))
 
+    def get_case_data(self, key):
+        data = self.load_yaml()
+        for row in data:
+            if key in row:
+                return row[key]
 
-# if __name__ == "__main__":
-#     # e = ExcelCase(filename="DBTESTCASE.xlsx", sheetname="DBSHOPADMIN")
-#     #
-#     # print(e.get_items())
-#     y = YamlData("usermoduledata.yaml")
-#     for row in y.load_yaml():
-#         print(row)
+
+if __name__ == "__main__":
+    e = ExcelCase(filename="DBTESTCASE.xlsx", sheetname="DBSHOPADMIN")
+
+    print(e.get_items())
+    y = YamlData("usermoduledata.yaml")
+    print(y.load_yaml())
+    # for i in y.get_case_data("addteam"):
+    #     print(i)
+    f = y.get_case_data("addteam")
+    print(f)
