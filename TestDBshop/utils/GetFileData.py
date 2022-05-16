@@ -51,13 +51,13 @@ class YamlData:
                 return row[key]
 
 
-if __name__ == "__main__":
-    e = ExcelCase(filename="DBTESTCASE.xlsx", sheetname="DBSHOPADMIN")
-
-    print(e.get_items())
-    y = YamlData("usermoduledata.yaml")
-    print(y.load_yaml())
-    # for i in y.get_case_data("addteam"):
-    #     print(i)
-    f = y.get_case_data("addteam")
-    print(f)
+# if __name__ == "__main__":
+#     e = ExcelCase(filename="DBTESTCASE.xlsx", sheetname="DBSHOPADMIN")
+#
+#     print(e.get_items())
+#     y = YamlData("usermoduledata.yaml")
+#     print(y.load_yaml())
+#     # for i in y.get_case_data("addteam"):
+#     #     print(i)
+#     f = y.get_case_data("addteam")
+#     print(f)

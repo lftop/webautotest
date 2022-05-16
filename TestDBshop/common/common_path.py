@@ -11,4 +11,4 @@ test_case_data_dir = os.path.join(Dir_Project, "data/testcase_data")
 #log文件生成地址
 log_path=os.path.join(Dir_Project,"results/log/log1.log")
 
-print(log_path)
+# print(log_path)

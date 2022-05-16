@@ -3,6 +3,7 @@ import logging
 from common.common_path import *
 import os
 
+
 # 因为控制台的级别设置为WARNING，所有WARNING以下的级别并没有输出。
 
 
@@ -13,28 +14,31 @@ class Log():
         '''添加一个日志器'''
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.DEBUG)
-        self.stream_control()
-
-    def fomt(self):
-        '''设置格式器'''
         self.for1 = logging.Formatter(fmt='[%(name)s]  [%(levelname)s]  [%(asctime)s] ------->>>>[%(message)s ]')
         self.for2 = logging.Formatter(
             fmt='[%(name)s]  [%(levelname)s]  [%(asctime)s] [%(filename)s]------->>>>[%(message)s ]')
-        return self.for1, self.for2
+        self.stream_control()
+
+    # def fomt(self):
+    #     '''设置格式器'''
+    #     self.for1 = logging.Formatter(fmt='[%(name)s]  [%(levelname)s]  [%(asctime)s] ------->>>>[%(message)s ]')
+    #     self.for2 = logging.Formatter(
+    #         fmt='[%(name)s]  [%(levelname)s]  [%(asctime)s] [%(filename)s]------->>>>[%(message)s ]')
+    #     return self.for1, self.for2
 
     def hand(self):
         '''添加一个处理器'''
         self.h = logging.StreamHandler()
         self.h.setLevel(logging.NOTSET)
-        self.h.setFormatter(self.fomt()[0])  # 将格式器添加到处理器
-        self.logger.addHandler(self.h)  # 将处理器添加到格式器
+        self.h.setFormatter(self.for1)  # 将格式器添加到处理器
+        self.logger.addHandler(self.h)  # 将处理器添加到日志器
 
     def add_file(self, file):
         '''设置文件输出控制台'''
         self.f = logging.FileHandler(filename=file, mode='a', encoding='UTF-8')
         self.f.setLevel(logging.DEBUG)
-        self.f.setFormatter(self.fomt()[1])
-        self.logger.addHandler(self.f)  # 将文件输出控制台添加到日志器
+        self.f.setFormatter(self.for2)
+        self.logger.addHandler(self.f)  # 将文件输出添加到日志器
 
     @property
     def info(self):
