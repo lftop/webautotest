@@ -1,0 +1,137 @@
+{
+  "uid" : "ae549ab8b29f32e4",
+  "name" : "test_fun3",
+  "fullName" : "testcase.test_case01.Test_case01#test_fun3",
+  "historyId" : "855167528bb38eb74082a1e8a239e55f",
+  "time" : {
+    "start" : 1653227267028,
+    "stop" : 1653227291997,
+    "duration" : 24969
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 0 == True\n  +0\n  -True",
+  "statusTrace" : "self = <testcase.test_case01.Test_case01 object at 0x000001A12E3B7788>\n\n    @pytest.mark.run(order=2)\n    @allure.story(\"删除用户组\")\n    @pytest.mark.dependency(depends=[\"Test_case01::test_fun2\"])\n    def test_fun3(self):\n        print(\"test_func3\")\n        Test_case01.Index += 1\n        print(self.Index)\n        with allure.step(\"用户组删除操作\"):\n            payload = self.Teat.editteam(self.getdata(self.Index, self.excel1_obj.TESTDATA).get(\"payload\"))\n            print(\"fun3_payload:\", payload)\n>           assert self.Teat.deleteteam(payload)==True\nE           assert 0 == True\nE             +0\nE             -True\n\ntestcase\\test_case01.py:71: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_Test_case01",
+    "time" : {
+      "start" : 1653227210981,
+      "stop" : 1653227210981,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 0 == True\n  +0\n  -True",
+    "statusTrace" : "self = <testcase.test_case01.Test_case01 object at 0x000001A12E3B7788>\n\n    @pytest.mark.run(order=2)\n    @allure.story(\"删除用户组\")\n    @pytest.mark.dependency(depends=[\"Test_case01::test_fun2\"])\n    def test_fun3(self):\n        print(\"test_func3\")\n        Test_case01.Index += 1\n        print(self.Index)\n        with allure.step(\"用户组删除操作\"):\n            payload = self.Teat.editteam(self.getdata(self.Index, self.excel1_obj.TESTDATA).get(\"payload\"))\n            print(\"fun3_payload:\", payload)\n>           assert self.Teat.deleteteam(payload)==True\nE           assert 0 == True\nE             +0\nE             -True\n\ntestcase\\test_case01.py:71: AssertionError",
+    "steps" : [ {
+      "name" : "用户组删除操作",
+      "time" : {
+        "start" : 1653227267028,
+        "stop" : 1653227291997,
+        "duration" : 24969
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert 0 == True\n  +0\n  -True\n",
+      "statusTrace" : "  File \"E:\\Pyitems\\DBSHOP\\testcase\\test_case01.py\", line 71, in test_fun3\n    assert self.Teat.deleteteam(payload)==True\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_Test_case01::0",
+    "time" : {
+      "start" : 1653227292018,
+      "stop" : 1653227292057,
+      "duration" : 39
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "用户组模块"
+  }, {
+    "name" : "story",
+    "value" : "删除用户组"
+  }, {
+    "name" : "tag",
+    "value" : "dependency(depends=['Test_case01::test_fun2'])"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=2)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_case01"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_case01"
+  }, {
+    "name" : "host",
+    "value" : "PC-20210917KHGT"
+  }, {
+    "name" : "thread",
+    "value" : "13180-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_case01"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "run(order=2)", "dependency(depends=['Test_case01::test_fun2'])" ]
+  },
+  "source" : "ae549ab8b29f32e4.json",
+  "parameterValues" : [ ]
+}

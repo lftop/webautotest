@@ -1,0 +1,142 @@
+{
+  "uid" : "116734115942c06e",
+  "name" : "test_fun1",
+  "fullName" : "testcase.test_case01.Test_case01#test_fun1",
+  "historyId" : "6a599022aafd9140204c249e5baa68a1",
+  "time" : {
+    "start" : 1653227210982,
+    "stop" : 1653227245624,
+    "duration" : 34642
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_Test_case01",
+    "time" : {
+      "start" : 1653227210981,
+      "stop" : 1653227210981,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "登录成功",
+      "time" : {
+        "start" : 1653227210982,
+        "stop" : 1653227234297,
+        "duration" : 23315
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "导航至用户组界面添加成功",
+      "time" : {
+        "start" : 1653227234297,
+        "stop" : 1653227245624,
+        "duration" : 11327
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_Test_case01::0",
+    "time" : {
+      "start" : 1653227292018,
+      "stop" : 1653227292057,
+      "duration" : 39
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "用户组模块"
+  }, {
+    "name" : "story",
+    "value" : "添加用户组"
+  }, {
+    "name" : "tag",
+    "value" : "dependency"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_case01"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_case01"
+  }, {
+    "name" : "host",
+    "value" : "PC-20210917KHGT"
+  }, {
+    "name" : "thread",
+    "value" : "13180-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_case01"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "dependency", "run(order=1)" ]
+  },
+  "source" : "116734115942c06e.json",
+  "parameterValues" : [ ]
+}

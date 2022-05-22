@@ -1,2 +1,5 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun May 22 21:47:47 CST 2022","Sun May 22 21:48:11 CST 2022","24969","testcase","test_case01","Test_case01","","","test_fun3",""
+"passed","Sun May 22 21:46:50 CST 2022","Sun May 22 21:47:25 CST 2022","34642","testcase","test_case01","Test_case01","","","test_fun1",""
 "broken","Tue May 17 23:15:40 CST 2022","Tue May 17 23:15:40 CST 2022","30","testcase","test_case01","Test_case01","","","test_addteam",""
+"passed","Sun May 22 21:47:25 CST 2022","Sun May 22 21:47:47 CST 2022","21399","testcase","test_case01","Test_case01","","","test_fun2",""

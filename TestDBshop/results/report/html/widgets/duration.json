@@ -1,5 +1,25 @@
 [ {
-  "uid" : "da64a6e9ee31faec",
+  "uid" : "ae549ab8b29f32e4",
+  "name" : "test_fun3",
+  "time" : {
+    "start" : 1653227267028,
+    "stop" : 1653227291997,
+    "duration" : 24969
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "116734115942c06e",
+  "name" : "test_fun1",
+  "time" : {
+    "start" : 1653227210982,
+    "stop" : 1653227245624,
+    "duration" : 34642
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd10ba55c8b91a8f",
   "name" : "test_addteam",
   "time" : {
     "start" : 1652800540163,
@@ -7,5 +27,15 @@
     "duration" : 30
   },
   "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "928b08c4ec5fb292",
+  "name" : "test_fun2",
+  "time" : {
+    "start" : 1653227245625,
+    "stop" : 1653227267024,
+    "duration" : 21399
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]

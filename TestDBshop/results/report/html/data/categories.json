@@ -7,7 +7,7 @@
       "name" : "IndexError: tuple index out of range",
       "children" : [ {
         "name" : "test_addteam",
-        "uid" : "da64a6e9ee31faec",
+        "uid" : "dd10ba55c8b91a8f",
         "parentUid" : "2c6752fe25a95e5634d9e2bf3ed0f246",
         "status" : "broken",
         "time" : {
@@ -26,5 +26,30 @@
       "uid" : "2c6752fe25a95e5634d9e2bf3ed0f246"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 0 == True\n  +0\n  -True",
+      "children" : [ {
+        "name" : "test_fun3",
+        "uid" : "ae549ab8b29f32e4",
+        "parentUid" : "810773a1479a6d434c8393b9faab63ab",
+        "status" : "failed",
+        "time" : {
+          "start" : 1653227267028,
+          "stop" : 1653227291997,
+          "duration" : 24969
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "810773a1479a6d434c8393b9faab63ab"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ]
 }

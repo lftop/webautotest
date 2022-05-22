@@ -5,7 +5,7 @@
     "name" : "testcase.test_case01",
     "children" : [ {
       "name" : "test_addteam",
-      "uid" : "da64a6e9ee31faec",
+      "uid" : "dd10ba55c8b91a8f",
       "parentUid" : "8be363ad87216b81654559eaaf34d9d8",
       "status" : "broken",
       "time" : {
@@ -19,6 +19,57 @@
       "newBroken" : false,
       "retriesCount" : 7,
       "retriesStatusChange" : true,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_fun1",
+      "uid" : "116734115942c06e",
+      "parentUid" : "8be363ad87216b81654559eaaf34d9d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653227210982,
+        "stop" : 1653227245624,
+        "duration" : 34642
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_fun2",
+      "uid" : "928b08c4ec5fb292",
+      "parentUid" : "8be363ad87216b81654559eaaf34d9d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653227245625,
+        "stop" : 1653227267024,
+        "duration" : 21399
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_fun3",
+      "uid" : "ae549ab8b29f32e4",
+      "parentUid" : "8be363ad87216b81654559eaaf34d9d8",
+      "status" : "failed",
+      "time" : {
+        "start" : 1653227267028,
+        "stop" : 1653227291997,
+        "duration" : 24969
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
       "parameters" : [ ]
     } ],
     "uid" : "testcase.test_case01"

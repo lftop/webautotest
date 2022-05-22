@@ -1,7 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver import ActionChains
 import time
+
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+
 from utils.GetConfig import *
 
 
@@ -43,25 +45,31 @@ class BaseWeb:
         :param args[1]: 定位字符串
         :param args[2]: 值
         """
-        print("args:",args)
+        print("args:", args)
         self.__local_element(args[0], args[1]).send_keys(args[2])
 
     def flag_selected(self, *args):
+        print(self.__local_element(args[0], args[1]).is_selected())
         return self.__local_element(args[0], args[1]).is_selected()
 
     def flag_enabled(self, *args):
+        print(self.__local_element(args[0], args[1]).is_enabled())
         return self.__local_element(args[0], args[1]).is_enabled()
 
-    def flag_display(self,*args):
+    def flag_display(self, *args):
+        print(self.__local_element(args[0], args[1]).is_displayed())
         return self.__local_element(args[0], args[1]).is_displayed()
 
-    def b_clears(self,*args):
+    def b_clears(self, *args):
         print("args:", args)
         self.__local_element(args[0], args[1]).clear()
 
     def b_move_event(self, *args):
         element = self.__local_element(args[0], args[1])
         ActionChains(self.driver).move_to_element(element).perform()
+
+    def fool_propoty_value(self, *args):
+        return self.__local_element(args[0], args[1]).get_attribute(args[2])
 
     def wait_perform(self, second, wait_way):
         if wait_way == 0:
@@ -73,5 +81,3 @@ class BaseWeb:
 
     def close_browser(self):
         self.driver.close()
-
-

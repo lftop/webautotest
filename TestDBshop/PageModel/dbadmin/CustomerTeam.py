@@ -86,35 +86,32 @@ class CustomerTeam(BaseWeb):
                 time.sleep(2)
             # 文本框输入
             for txts in ele:
-                print("txts:",txts)
-                print("len:",len(txts))
+                # print("txts:", txts)
+                # print("len:", len(txts))
                 if len(txts) == 3:
-                    t, p,w = txts
-                    print("t:{0} p:{1} w:{1}".format(t,p,w))
-                    getattr(self, t)(self, w, p)
+                    t, p, w = txts
+                    print("t:{0} p:{1} w:{1}".format(t, p, w))
+                    getattr(self, t)(getattr(self, w),p)
                 if len(txts) == 4:
                     T1, postr1, way, T2 = txts
+                    T2 = T2.split("=")
+                    print(T2)
                     print("e1:{0} postr:{1} way:{2} e2:{3}".format(T1, postr1, way, T2))
-                    if getattr(self, T2)(self, way, postr1):
-                        pass
-                    else:
+                    P_FLG = getattr(self, T2[0])(getattr(self, way), postr1, T2[1])
+                    print(P_FLG)
+                    if P_FLG != T2[2]:
                         getattr(self, T1)(self, way, postr1)
 
                 if len(txts) == 5:
-
                     eve1, postr2, way, v, eve2 = txts
                     print("eve1:{0} postr:{1} way:{2} v :{3} eve2:{4} ".format(eve1, postr2, way, v, eve2))
                     getattr(self, eve2)(getattr(self, way), postr2)
                     getattr(self, eve1)(getattr(self, way), postr2, v)
-                # else:
-                #     assert "Error for param is not correct:{0}".format(params)
                 time.sleep(2)
-
         except Exception as e:
             flag = 0
             print("Error for Code:", e)  # 后期改成log
-        time.sleep(4)
-        print(flag)
+        return flag
 
     def deleteteam(self, params):
         flag = 1
@@ -122,10 +119,10 @@ class CustomerTeam(BaseWeb):
             even = params.get("event", "None")
             for e in even:
                 eve, postr, way = e
-                getattr(self, eve)(self, way, postr)
+                print("eve:",eve,"postr:",postr,"way:",way)
+                getattr(self, eve)(getattr(self, way), postr)
                 time.sleep(2)
         except Exception as e:
             flag = 0
             print("Error for Code:", e)
-        time.sleep(4)
         return flag

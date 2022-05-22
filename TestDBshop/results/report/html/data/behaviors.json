@@ -7,7 +7,7 @@
       "name" : "添加用户组",
       "children" : [ {
         "name" : "test_addteam",
-        "uid" : "da64a6e9ee31faec",
+        "uid" : "dd10ba55c8b91a8f",
         "parentUid" : "0e2213ea34083c6a0957d05f6b5d8ba9",
         "status" : "broken",
         "time" : {
@@ -22,8 +22,67 @@
         "retriesCount" : 7,
         "retriesStatusChange" : true,
         "parameters" : [ ]
+      }, {
+        "name" : "test_fun1",
+        "uid" : "116734115942c06e",
+        "parentUid" : "0e2213ea34083c6a0957d05f6b5d8ba9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653227210982,
+          "stop" : 1653227245624,
+          "duration" : 34642
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
       } ],
       "uid" : "0e2213ea34083c6a0957d05f6b5d8ba9"
+    }, {
+      "name" : "编辑用户组",
+      "children" : [ {
+        "name" : "test_fun2",
+        "uid" : "928b08c4ec5fb292",
+        "parentUid" : "63ed152f565164ed47b3d411f02d5681",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653227245625,
+          "stop" : 1653227267024,
+          "duration" : 21399
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "63ed152f565164ed47b3d411f02d5681"
+    }, {
+      "name" : "删除用户组",
+      "children" : [ {
+        "name" : "test_fun3",
+        "uid" : "ae549ab8b29f32e4",
+        "parentUid" : "e4f532e3e080c04edcd86c7d3daea8d7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1653227267028,
+          "stop" : 1653227291997,
+          "duration" : 24969
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e4f532e3e080c04edcd86c7d3daea8d7"
     } ],
     "uid" : "89ff39a55598c6b893e95b0e59d232f6"
   } ]

@@ -43,7 +43,7 @@ editteam:
       - [ "b_sendkey","userGroupName","B_ID","黄金一等会员","b_clears" ]
       - [ "b_sendkey","integralStart","B_ID",3500,"b_clears"]
       - [ "b_sendkey","integralEnd","B_ID",4000,"b_clears" ]
-      - [ "b_click","integralState","B_ID","flag_selected" ]
+      - [ "b_click","integralState","B_ID","fool_propoty_value=checked=true" ]
       - [ "b_click","//button[text()=' 保存客户组']","B_xpath" ]
   expected:
     msg: 客户组\t{0}\编辑成功
@@ -59,10 +59,12 @@ deleteteam:
       event:
         - [ "b_click","submit-login","B_ID" ]
   dependence: editteam
-  even_ele:
-    - [ "b_click","//a[text()='客户']","B_xpath" ]
-    - [ "b_click","//a[text()='客户组管理']","B_xpath" ]
-    - [ "b_click","//table[@class='table table-hover']/tbody/tr/td[text()='黄金会员']/../td[5]/a[text()=' 删除']","B_xpath" ]
+  payload:
+    event:
+      - [ "b_click","//a[text()='客户']","B_xpath" ]
+      - [ "b_click","//a[text()='客户组管理']","B_xpath" ]
+      - [ "b_click","//table[@class='table table-hover']/tbody/tr/td[text()='黄金一等会员']/../td[5]/a[text()=' 删除']","B_xpath" ]
+      - [ "b_click","layui-layer-btn0","B_CLASS" ]
   expected:
     msg: 客户组\t{0}\t删除成功
     status: True
