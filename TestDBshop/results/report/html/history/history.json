@@ -1,0 +1,22 @@
+{
+  "c5fd2f3cf6a94a4c3fe540b9d2118e9e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "da64a6e9ee31faec",
+      "status" : "broken",
+      "statusDetails" : "IndexError: tuple index out of range",
+      "time" : {
+        "start" : 1652800540163,
+        "stop" : 1652800540193,
+        "duration" : 30
+      }
+    } ]
+  }
+}

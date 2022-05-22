@@ -1,24 +1,25 @@
 ---
 addteam:
   prediction:
-    ele:
-      - [ "admin_name","B_ID","b_sendkey" ]
-      - [ "admin_passwd","B_ID","b_sendkey" ]
-      - [ "login_captcha","B_ID","b_sendkey" ]
-    event:
-      - [ "submit-login","B_ID","b_click" ]
+    login:
+      ele:
+        - [ "b_sendkey","admin_name","B_ID","admin" ]
+        - [ "b_sendkey","admin_passwd","B_ID","lf12345678" ]
+        - [ "b_sendkey","login_captcha","B_ID","input" ]
+      event:
+        - [ "b_click","submit-login","B_ID" ]
     dependence: None
   payload:
     event:
-      - [ "//a[text()='商品']","B_xpath","b_click" ]
-      - [ "//a[text()='客户组管理']","B_xpath","b_click" ]
-      - [ "//a[text()=' 添加客户组']","B_xpath","b_click" ]
+      - [ "b_click","//a[text()='客户']","B_xpath" ]
+      - [ "b_click","//a[text()='客户组管理']","B_xpath" ]
+      - [ "b_click","//a[text()=' 添加客户组']","B_xpath" ]
     ele:
-      - [ "userGroupName","B_ID","b_sendkey","黄金会员" ]
-      - [ "integralStart","B_ID","b_sendkey",3000 ]
-      - [ "integralEnd","B_ID","b_sendkey",4000 ]
-      - [ "integralState","B_ID","b_click" ]
-      - [ "//button[text()=' 保存客户组']","B_xpath","b_click" ]
+      - [ "b_sendkey","userGroupName","B_ID","黄金会员" ]
+      - [ "b_sendkey","integralStart","B_ID",3000 ]
+      - [ "b_sendkey","integralEnd","B_ID",4000 ]
+      - [ "b_click","integralState","B_ID" ]
+      - [ "b_click","//button[text()=' 保存客户组']","B_xpath" ]
   expected:
     msg: 客户组\t{0}\t添加成功
     status: True
@@ -27,24 +28,23 @@ editteam:
   prediction:
     login:
       ele:
-        - [ "admin_name","B_ID","b_sendkey" ]
-        - [ "admin_passwd","B_ID","b_sendkey" ]
-        - [ "login_captcha","B_ID","b_sendkey" ]
+        - [ "b_sendkey","admin_name","B_ID","admin" ]
+        - [ "b_sendkey","admin_passwd","B_ID","lf12345678" ]
+        - [ "b_sendkey","login_captcha","B_ID" ]
       event:
-        - [ "submit-login","B_ID","b_click" ]
-    dependence: addteam
+        - [ "b_click","submit-login","B_ID" ]
+  dependence: addteam
   payload:
     event:
-      - [ "//a[text()='商品']","B_xpath","b_click" ]
-      - [ "//a[text()='客户组管理']","B_xpath","b_click" ]
-      - [ "//a[text()=' 添加客户组']","B_xpath","b_click" ]
+      - [ "b_click","//a[text()='客户']","B_xpath", ]
+      - [ "b_click","//a[text()='客户组管理']","B_xpath" ]
+      - ["b_click","//table[@class='table table-hover']/tbody/tr/td[text()='黄金会员']/../td[5]/a[text()=' 编辑']","B_xpath" ]
     ele:
-      - [ "//table[@class='table table-hover']/tbody/tr/td[text()='{0}']/../td[5]/a[text()=' 编辑']","B_ID","b_click","黄金会员" ]
-      - [ "userGroupName","B_ID","b_sendkey","黄金会员" ]
-      - [ "integralStart","B_ID","b_sendkey",3500 ]
-      - [ "integralEnd","B_ID","b_sendkey",4000 ]
-      - [ "integralState","B_ID","b_click" ]
-      - [ "//button[text()=' 保存客户组']","B_xpath","b_click" ]
+      - [ "b_sendkey","userGroupName","B_ID","黄金一等会员","b_clears" ]
+      - [ "b_sendkey","integralStart","B_ID",3500,"b_clears"]
+      - [ "b_sendkey","integralEnd","B_ID",4000,"b_clears" ]
+      - [ "b_click","integralState","B_ID","flag_selected" ]
+      - [ "b_click","//button[text()=' 保存客户组']","B_xpath" ]
   expected:
     msg: 客户组\t{0}\编辑成功
     status: True
@@ -53,17 +53,16 @@ deleteteam:
   prediction:
     login:
       ele:
-        - [ "admin_name","B_ID","b_sendkey" ]
-        - [ "admin_passwd","B_ID","b_sendkey" ]
-        - [ "login_captcha","B_ID","b_sendkey" ]
+        - [ "b_sendkey","admin_name","B_ID","admin" ]
+        - [ "b_sendkey","admin_passwd","B_ID","lf12345678" ]
+        - [ "b_sendkey","login_captcha","B_ID" ]
       event:
-        - [ "submit-login","B_ID","b_click" ]
-    dependence: editteam
+        - [ "b_click","submit-login","B_ID" ]
+  dependence: editteam
   even_ele:
-    - [ "//a[text()='商品']","B_xpath","b_click" ]
-    - [ "//a[text()='客户组管理']","B_xpath","b_click" ]
-    - [ "//a[text()=' 添加客户组']","B_xpath","b_click" ]
-    - [ "//table[@class='table table-hover']/tbody/tr/td[text()='{0}']/../td[5]/a[text()=' 删除']","B_ID","b_click","黄金会员" ]
+    - [ "b_click","//a[text()='客户']","B_xpath" ]
+    - [ "b_click","//a[text()='客户组管理']","B_xpath" ]
+    - [ "b_click","//table[@class='table table-hover']/tbody/tr/td[text()='黄金会员']/../td[5]/a[text()=' 删除']","B_xpath" ]
   expected:
     msg: 客户组\t{0}\t删除成功
     status: True

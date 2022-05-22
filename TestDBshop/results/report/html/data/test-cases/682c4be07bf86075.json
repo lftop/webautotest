@@ -1,0 +1,125 @@
+{
+  "uid" : "682c4be07bf86075",
+  "name" : "test_addteam",
+  "fullName" : "testcase.test_case01.Test_case01#test_addteam",
+  "historyId" : "c5fd2f3cf6a94a4c3fe540b9d2118e9e",
+  "time" : {
+    "start" : 1652800055265,
+    "stop" : 1652800055285,
+    "duration" : 20
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: b_sendkey() takes 2 positional arguments but 3 were given",
+  "statusTrace" : "self = <testcase.test_case01.Test_case01 object at 0x000001C6570E9408>\n\n    @allure.story(\"添加用户组\")\n    def test_addteam(self):\n        excel=self.excel1_obj.get_items()[0]\n        # print(\"excel:\",excel)\n        yaml=self.yam_obj.get_case_data(\"addteam\")\n        # print(\"yaml\",yaml)\n        with allure.step(\"登录成功\"):\n>           self.Teat.prediction(yaml.get(\"prediction\"))\n\ntestcase\\test_case01.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <PageModel.dbadmin.CustomerTeam.CustomerTeam object at 0x000001C647E9E208>\nparams = {'dependence': 'None', 'ele': [['admin_name', 'B_ID', 'b_sendkey'], ['admin_passwd', 'B_ID', 'b_sendkey'], ['login_captcha', 'B_ID', 'b_sendkey']], 'event': [['submit-login', 'B_ID', 'b_click']]}\n\n    def prediction(self, params):\n        ele=params.get(\"ele\")\n        event=params.get(\"event\")\n        flag=0\n        print(ele,event)\n    \n        for item in ele:\n            print(item)\n>           getattr(self,item[2])(getattr(self,item[1]),item[0])\nE           TypeError: b_sendkey() takes 2 positional arguments but 3 were given\n\nPageModel\\dbadmin\\CustomerTeam.py:19: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_Test_case01",
+    "time" : {
+      "start" : 1652800055264,
+      "stop" : 1652800055264,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: b_sendkey() takes 2 positional arguments but 3 were given",
+    "statusTrace" : "self = <testcase.test_case01.Test_case01 object at 0x000001C6570E9408>\n\n    @allure.story(\"添加用户组\")\n    def test_addteam(self):\n        excel=self.excel1_obj.get_items()[0]\n        # print(\"excel:\",excel)\n        yaml=self.yam_obj.get_case_data(\"addteam\")\n        # print(\"yaml\",yaml)\n        with allure.step(\"登录成功\"):\n>           self.Teat.prediction(yaml.get(\"prediction\"))\n\ntestcase\\test_case01.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <PageModel.dbadmin.CustomerTeam.CustomerTeam object at 0x000001C647E9E208>\nparams = {'dependence': 'None', 'ele': [['admin_name', 'B_ID', 'b_sendkey'], ['admin_passwd', 'B_ID', 'b_sendkey'], ['login_captcha', 'B_ID', 'b_sendkey']], 'event': [['submit-login', 'B_ID', 'b_click']]}\n\n    def prediction(self, params):\n        ele=params.get(\"ele\")\n        event=params.get(\"event\")\n        flag=0\n        print(ele,event)\n    \n        for item in ele:\n            print(item)\n>           getattr(self,item[2])(getattr(self,item[1]),item[0])\nE           TypeError: b_sendkey() takes 2 positional arguments but 3 were given\n\nPageModel\\dbadmin\\CustomerTeam.py:19: TypeError",
+    "steps" : [ {
+      "name" : "登录成功",
+      "time" : {
+        "start" : 1652800055285,
+        "stop" : 1652800055285,
+        "duration" : 0
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: b_sendkey() takes 2 positional arguments but 3 were given\n",
+      "statusTrace" : "  File \"E:\\gitku\\dbshop\\TestDBshop\\testcase\\test_case01.py\", line 31, in test_addteam\n    self.Teat.prediction(yaml.get(\"prediction\"))\n  File \"E:\\gitku\\dbshop\\TestDBshop\\PageModel\\dbadmin\\CustomerTeam.py\", line 19, in prediction\n    getattr(self,item[2])(getattr(self,item[1]),item[0])\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_Test_case01::0",
+    "time" : {
+      "start" : 1652800055309,
+      "stop" : 1652800055354,
+      "duration" : 45
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "添加用户组"
+  }, {
+    "name" : "feature",
+    "value" : "用户组模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_case01"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_case01"
+  }, {
+    "name" : "host",
+    "value" : "PC-20210917KHGT"
+  }, {
+    "name" : "thread",
+    "value" : "21236-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_case01"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "682c4be07bf86075.json",
+  "parameterValues" : [ ]
+}

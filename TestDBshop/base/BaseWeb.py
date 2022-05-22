@@ -34,6 +34,7 @@ class BaseWeb:
         :param args[0]: 定位方式
         :param args[1]: 定位字符串
         """
+        print("args:", args)
         self.__local_element(args[0], args[1]).click()
 
     def b_sendkey(self, *args):
@@ -42,7 +43,21 @@ class BaseWeb:
         :param args[1]: 定位字符串
         :param args[2]: 值
         """
+        print("args:",args)
         self.__local_element(args[0], args[1]).send_keys(args[2])
+
+    def flag_selected(self, *args):
+        return self.__local_element(args[0], args[1]).is_selected()
+
+    def flag_enabled(self, *args):
+        return self.__local_element(args[0], args[1]).is_enabled()
+
+    def flag_display(self,*args):
+        return self.__local_element(args[0], args[1]).is_displayed()
+
+    def b_clears(self,*args):
+        print("args:", args)
+        self.__local_element(args[0], args[1]).clear()
 
     def b_move_event(self, *args):
         element = self.__local_element(args[0], args[1])
@@ -55,5 +70,8 @@ class BaseWeb:
             self.driver.implicitly_wait(second)
         else:
             pass
+
+    def close_browser(self):
+        self.driver.close()
 
 

@@ -1,0 +1,30 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "用户组模块",
+    "children" : [ {
+      "name" : "添加用户组",
+      "children" : [ {
+        "name" : "test_addteam",
+        "uid" : "da64a6e9ee31faec",
+        "parentUid" : "0e2213ea34083c6a0957d05f6b5d8ba9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652800540163,
+          "stop" : 1652800540193,
+          "duration" : 30
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 7,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0e2213ea34083c6a0957d05f6b5d8ba9"
+    } ],
+    "uid" : "89ff39a55598c6b893e95b0e59d232f6"
+  } ]
+}

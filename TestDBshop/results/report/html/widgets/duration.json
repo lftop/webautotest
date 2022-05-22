@@ -1,0 +1,11 @@
+[ {
+  "uid" : "da64a6e9ee31faec",
+  "name" : "test_addteam",
+  "time" : {
+    "start" : 1652800540163,
+    "stop" : 1652800540193,
+    "duration" : 30
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
