@@ -11,7 +11,5 @@ if __name__=="__main__":
 # if __name__=="__main__":
       print("Helloword")
 #     pytest.main(['-s'])
-
-=======
-      HAHAHHAA
->>>>>>> 9c23aaa1c0ac43eb4f1775fe95b50012bd35b35d
+      for i in range(100):
+          print(i)
