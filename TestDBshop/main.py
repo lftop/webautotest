@@ -13,3 +13,4 @@ if __name__=="__main__":
 #     pytest.main(['-s'])
       for i in range(100):
           print(i)
+          print(i+=1)
